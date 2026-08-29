@@ -1,0 +1,33 @@
+{
+  "name": "rspack-cache-benchmark",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Persistent cache benchmark for Rspack PR #15380",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "generate": "node scripts/generate-fixture.mjs",
+    "canary:verify": "node scripts/verify-canary.mjs",
+    "benchmark": "npm run canary:verify && npm run generate && node scripts/benchmark.mjs",
+    "readme:update": "node scripts/update-readme.mjs"
+  },
+  "benchmark": {
+    "pullRequest": "https://github.com/web-infra-dev/rspack/pull/15380",
+    "commit": "45fd8a3aadd9a7b18101b5bcb946c07b98869738"
+  },
+  "dependencies": {
+    "@babel/core": "7.29.7",
+    "@rspack-canary/core": "2.2.2-canary-45fd8a3a-20260829001855",
+    "@swc/helpers": "0.5.23",
+    "acorn": "8.18.0",
+    "babel-loader": "10.1.1",
+    "core-js": "3.50.0",
+    "json5": "2.2.3",
+    "lodash-es": "4.18.1",
+    "memfs": "4.68.1",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  }
+}

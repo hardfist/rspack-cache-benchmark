@@ -1,0 +1,69 @@
+name: Cache benchmark
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - README.md
+      - results/**
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: cache-benchmark
+  cancel-in-progress: false
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run benchmark
+        run: npm run benchmark
+        env:
+          BENCH_ROUNDS: 3
+          MODULE_COUNT: 10000
+          LINES_PER_MODULE: 200
+          MODULE_FANOUT: 5
+          SPECIFIERS_PER_MODULE: 20
+          NODE_OPTIONS: --max-old-space-size=12288
+
+      - name: Publish job summary
+        run: node -e 'require("node:fs").appendFileSync(process.env.GITHUB_STEP_SUMMARY, require("node:fs").readFileSync("results/summary.md"))'
+
+      - name: Upload raw results
+        uses: actions/upload-artifact@v4
+        with:
+          name: cache-benchmark-results
+          path: |
+            results/latest.json
+            results/summary.md
+          if-no-files-found: error
+
+      - name: Update README
+        run: |
+          npm run readme:update
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md results/latest.json results/summary.md
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m "chore: update benchmark results"
+          git push
+
