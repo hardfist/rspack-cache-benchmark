@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-29T13:44:26.729Z",
+  "generatedAt": "2026-08-31T03:52:55.737Z",
   "pullRequest": "https://github.com/web-infra-dev/rspack/pull/15380",
   "commit": "45fd8a3aadd9a7b18101b5bcb946c07b98869738",
   "canaryVersion": "2.2.2-canary-45fd8a3a-20260829001855",
@@ -36,8 +36,8 @@
     {
       "cacheKind": "legacy-cache",
       "phase": "seed-0",
-      "elapsedMs": 87011.036891,
-      "maxRssMiB": 4683.02734375,
+      "elapsedMs": 90348.251246,
+      "maxRssMiB": 4666.12890625,
       "compilationModuleCount": 10894,
       "statsModuleCount": 10888,
       "builtModules": 10886,
@@ -45,13 +45,13 @@
       "canaryVersion": "2.2.2-canary-45fd8a3a-20260829001855",
       "outputFileSystem": "memfs",
       "fixtureExists": true,
-      "cacheBytes": 753275666
+      "cacheBytes": 753275729
     },
     {
       "cacheKind": "legacy-cache",
       "phase": "restore-0",
-      "elapsedMs": 1138.239922,
-      "maxRssMiB": 3698.08203125,
+      "elapsedMs": 991.104293,
+      "maxRssMiB": 3570.65234375,
       "compilationModuleCount": 10894,
       "statsModuleCount": 10888,
       "builtModules": 0,
@@ -59,13 +59,13 @@
       "canaryVersion": "2.2.2-canary-45fd8a3a-20260829001855",
       "outputFileSystem": "memfs",
       "fixtureExists": true,
-      "cacheBytes": 753275665
+      "cacheBytes": 753275728
     },
     {
       "cacheKind": "new-module",
       "phase": "seed-0",
-      "elapsedMs": 87065.292792,
-      "maxRssMiB": 4608.3828125,
+      "elapsedMs": 93949.184527,
+      "maxRssMiB": 5295.2109375,
       "compilationModuleCount": 10894,
       "statsModuleCount": 10888,
       "builtModules": 10886,
@@ -73,13 +73,13 @@
       "canaryVersion": "2.2.2-canary-45fd8a3a-20260829001855",
       "outputFileSystem": "memfs",
       "fixtureExists": true,
-      "cacheBytes": 183272337
+      "cacheBytes": 183287560
     },
     {
       "cacheKind": "new-module",
       "phase": "restore-0",
-      "elapsedMs": 2697.795556,
-      "maxRssMiB": 3564.4140625,
+      "elapsedMs": 2731.639286,
+      "maxRssMiB": 4604.29296875,
       "compilationModuleCount": 10894,
       "statsModuleCount": 10888,
       "builtModules": 10886,
@@ -87,13 +87,13 @@
       "canaryVersion": "2.2.2-canary-45fd8a3a-20260829001855",
       "outputFileSystem": "memfs",
       "fixtureExists": true,
-      "cacheBytes": 183273325
+      "cacheBytes": 183288547
     },
     {
       "cacheKind": "new-loader",
       "phase": "seed-0",
-      "elapsedMs": 88319.884966,
-      "maxRssMiB": 5552.14453125,
+      "elapsedMs": 92634.859063,
+      "maxRssMiB": 4822.59375,
       "compilationModuleCount": 10894,
       "statsModuleCount": 10888,
       "builtModules": 10886,
@@ -101,13 +101,13 @@
       "canaryVersion": "2.2.2-canary-45fd8a3a-20260829001855",
       "outputFileSystem": "memfs",
       "fixtureExists": true,
-      "cacheBytes": 227611668
+      "cacheBytes": 227609122
     },
     {
       "cacheKind": "new-loader",
       "phase": "restore-0",
-      "elapsedMs": 6068.142045,
-      "maxRssMiB": 4176.15234375,
+      "elapsedMs": 6156.097982,
+      "maxRssMiB": 3931.31640625,
       "compilationModuleCount": 10894,
       "statsModuleCount": 10888,
       "builtModules": 10886,
@@ -115,13 +115,13 @@
       "canaryVersion": "2.2.2-canary-45fd8a3a-20260829001855",
       "outputFileSystem": "memfs",
       "fixtureExists": true,
-      "cacheBytes": 227612655
+      "cacheBytes": 227610108
     },
     {
       "cacheKind": "new-module",
       "phase": "seed-1",
-      "elapsedMs": 87465.113513,
-      "maxRssMiB": 4665.2421875,
+      "elapsedMs": 96312.51823,
+      "maxRssMiB": 4698.08984375,
       "compilationModuleCount": 10894,
       "statsModuleCount": 10888,
       "builtModules": 10886,
@@ -129,13 +129,13 @@
       "canaryVersion": "2.2.2-canary-45fd8a3a-20260829001855",
       "outputFileSystem": "memfs",
       "fixtureExists": true,
-      "cacheBytes": 183278468
+      "cacheBytes": 183290544
     },
     {
       "cacheKind": "new-module",
       "phase": "restore-1",
-      "elapsedMs": 2679.007009,
-      "maxRssMiB": 3735.05078125,
+      "elapsedMs": 2743.438115,
+      "maxRssMiB": 4716.61328125,
       "compilationModuleCount": 10894,
       "statsModuleCount": 10888,
       "builtModules": 10886,
@@ -143,13 +143,13 @@
       "canaryVersion": "2.2.2-canary-45fd8a3a-20260829001855",
       "outputFileSystem": "memfs",
       "fixtureExists": true,
-      "cacheBytes": 183279455
+      "cacheBytes": 183291532
     },
     {
       "cacheKind": "new-loader",
       "phase": "seed-1",
-      "elapsedMs": 94212.036996,
-      "maxRssMiB": 4884.29296875,
+      "elapsedMs": 91380.293014,
+      "maxRssMiB": 4839.6796875,
       "compilationModuleCount": 10894,
       "statsModuleCount": 10888,
       "builtModules": 10886,
@@ -157,13 +157,13 @@
       "canaryVersion": "2.2.2-canary-45fd8a3a-20260829001855",
       "outputFileSystem": "memfs",
       "fixtureExists": true,
-      "cacheBytes": 227611636
+      "cacheBytes": 227611454
     },
     {
       "cacheKind": "new-loader",
       "phase": "restore-1",
-      "elapsedMs": 6126.678724,
-      "maxRssMiB": 4171.15234375,
+      "elapsedMs": 6319.281527,
+      "maxRssMiB": 4157.3203125,
       "compilationModuleCount": 10894,
       "statsModuleCount": 10888,
       "builtModules": 10886,
@@ -171,13 +171,13 @@
       "canaryVersion": "2.2.2-canary-45fd8a3a-20260829001855",
       "outputFileSystem": "memfs",
       "fixtureExists": true,
-      "cacheBytes": 227612623
+      "cacheBytes": 227612442
     },
     {
       "cacheKind": "legacy-cache",
       "phase": "seed-1",
-      "elapsedMs": 91228.570262,
-      "maxRssMiB": 4705.52734375,
+      "elapsedMs": 93041.975483,
+      "maxRssMiB": 4679.5,
       "compilationModuleCount": 10894,
       "statsModuleCount": 10888,
       "builtModules": 10886,
@@ -185,13 +185,13 @@
       "canaryVersion": "2.2.2-canary-45fd8a3a-20260829001855",
       "outputFileSystem": "memfs",
       "fixtureExists": true,
-      "cacheBytes": 753275805
+      "cacheBytes": 753275791
     },
     {
       "cacheKind": "legacy-cache",
       "phase": "restore-1",
-      "elapsedMs": 1153.313509,
-      "maxRssMiB": 3530.96484375,
+      "elapsedMs": 990.209251,
+      "maxRssMiB": 3742.0078125,
       "compilationModuleCount": 10894,
       "statsModuleCount": 10888,
       "builtModules": 0,
@@ -199,13 +199,13 @@
       "canaryVersion": "2.2.2-canary-45fd8a3a-20260829001855",
       "outputFileSystem": "memfs",
       "fixtureExists": true,
-      "cacheBytes": 753275804
+      "cacheBytes": 753275790
     },
     {
       "cacheKind": "new-loader",
       "phase": "seed-2",
-      "elapsedMs": 97452.492473,
-      "maxRssMiB": 5563.7890625,
+      "elapsedMs": 95431.724362,
+      "maxRssMiB": 5549.37109375,
       "compilationModuleCount": 10894,
       "statsModuleCount": 10888,
       "builtModules": 10886,
@@ -213,13 +213,13 @@
       "canaryVersion": "2.2.2-canary-45fd8a3a-20260829001855",
       "outputFileSystem": "memfs",
       "fixtureExists": true,
-      "cacheBytes": 227610301
+      "cacheBytes": 227611781
     },
     {
       "cacheKind": "new-loader",
       "phase": "restore-2",
-      "elapsedMs": 6151.340832,
-      "maxRssMiB": 4161.3203125,
+      "elapsedMs": 6264.346477,
+      "maxRssMiB": 3992.55078125,
       "compilationModuleCount": 10894,
       "statsModuleCount": 10888,
       "builtModules": 10886,
@@ -227,13 +227,13 @@
       "canaryVersion": "2.2.2-canary-45fd8a3a-20260829001855",
       "outputFileSystem": "memfs",
       "fixtureExists": true,
-      "cacheBytes": 227611289
+      "cacheBytes": 227612768
     },
     {
       "cacheKind": "legacy-cache",
       "phase": "seed-2",
-      "elapsedMs": 92582.511817,
-      "maxRssMiB": 4681.70703125,
+      "elapsedMs": 95563.611044,
+      "maxRssMiB": 4651.7421875,
       "compilationModuleCount": 10894,
       "statsModuleCount": 10888,
       "builtModules": 10886,
@@ -241,13 +241,13 @@
       "canaryVersion": "2.2.2-canary-45fd8a3a-20260829001855",
       "outputFileSystem": "memfs",
       "fixtureExists": true,
-      "cacheBytes": 753275852
+      "cacheBytes": 753275931
     },
     {
       "cacheKind": "legacy-cache",
       "phase": "restore-2",
-      "elapsedMs": 1147.842172,
-      "maxRssMiB": 3525.69921875,
+      "elapsedMs": 1012.591784,
+      "maxRssMiB": 3679.76171875,
       "compilationModuleCount": 10894,
       "statsModuleCount": 10888,
       "builtModules": 0,
@@ -255,13 +255,13 @@
       "canaryVersion": "2.2.2-canary-45fd8a3a-20260829001855",
       "outputFileSystem": "memfs",
       "fixtureExists": true,
-      "cacheBytes": 753275851
+      "cacheBytes": 753275930
     },
     {
       "cacheKind": "new-module",
       "phase": "seed-2",
-      "elapsedMs": 90969.476236,
-      "maxRssMiB": 4669.47265625,
+      "elapsedMs": 100120.812677,
+      "maxRssMiB": 4612.42578125,
       "compilationModuleCount": 10894,
       "statsModuleCount": 10888,
       "builtModules": 10886,
@@ -269,13 +269,13 @@
       "canaryVersion": "2.2.2-canary-45fd8a3a-20260829001855",
       "outputFileSystem": "memfs",
       "fixtureExists": true,
-      "cacheBytes": 183272183
+      "cacheBytes": 183292945
     },
     {
       "cacheKind": "new-module",
       "phase": "restore-2",
-      "elapsedMs": 2765.537193,
-      "maxRssMiB": 3831.34375,
+      "elapsedMs": 2809.267241,
+      "maxRssMiB": 3915.94140625,
       "compilationModuleCount": 10894,
       "statsModuleCount": 10888,
       "builtModules": 10886,
@@ -283,7 +283,7 @@
       "canaryVersion": "2.2.2-canary-45fd8a3a-20260829001855",
       "outputFileSystem": "memfs",
       "fixtureExists": true,
-      "cacheBytes": 183273171
+      "cacheBytes": 183293933
     }
   ]
 }
