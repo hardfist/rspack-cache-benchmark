@@ -38,6 +38,7 @@ const config = {
   entry: ["./src/vendor-entry.js", "./src/m0.js"],
   cache: {
     type: "persistent",
+    maxMemoryGenerations: 10,
     version: `pr-15380-${canaryVersion}`,
     buildDependencies: [],
     storage: {
@@ -137,4 +138,3 @@ compiler.run((error, stats) => {
     );
   });
 });
-

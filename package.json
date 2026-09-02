@@ -15,11 +15,11 @@
   },
   "benchmark": {
     "pullRequest": "https://github.com/web-infra-dev/rspack/pull/15380",
-    "commit": "9980571cc2823e0d40a0898e1c705be41bc3d743"
+    "commit": "267e0cfff9a7ad7ffdf4c6f622100f8d202c0046"
   },
   "dependencies": {
     "@babel/core": "7.29.7",
-    "@rspack-canary/core": "2.2.2-canary-9980571c-20260901115855",
+    "@rspack-canary/core": "2.2.3-canary-267e0cff-20260902085126",
     "@swc/helpers": "0.5.23",
     "acorn": "8.18.0",
     "babel-loader": "10.1.1",
