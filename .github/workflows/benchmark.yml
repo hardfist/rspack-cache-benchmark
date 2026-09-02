@@ -13,13 +13,18 @@ permissions:
   contents: write
 
 concurrency:
-  group: cache-benchmark
+  group: cache-benchmark-${{ github.event_name }}
   cancel-in-progress: false
 
 jobs:
   benchmark:
+    name: benchmark (maxMemoryGenerations=${{ matrix.max_memory_generations }})
     runs-on: ubuntu-24.04
     timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        max_memory_generations: ${{ fromJSON(github.event_name == 'workflow_dispatch' && '[0, 1]' || '[10]') }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -41,6 +46,7 @@ jobs:
           LINES_PER_MODULE: 200
           MODULE_FANOUT: 5
           SPECIFIERS_PER_MODULE: 20
+          MAX_MEMORY_GENERATIONS: ${{ matrix.max_memory_generations }}
           NODE_OPTIONS: --max-old-space-size=12288
 
       - name: Publish job summary
@@ -49,13 +55,14 @@ jobs:
       - name: Upload raw results
         uses: actions/upload-artifact@v4
         with:
-          name: cache-benchmark-results
+          name: cache-benchmark-results-max-memory-${{ matrix.max_memory_generations }}
           path: |
             results/latest.json
             results/summary.md
           if-no-files-found: error
 
       - name: Update README
+        if: github.event_name == 'push'
         run: |
           npm run readme:update
           git config user.name "github-actions[bot]"
@@ -66,4 +73,3 @@ jobs:
           fi
           git commit -m "chore: update benchmark results"
           git push
-

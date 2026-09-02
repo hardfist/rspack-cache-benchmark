@@ -6,6 +6,11 @@ const { createFsFromVolume, Volume } = require("memfs");
 const [benchRoot, cacheKind, cacheLocation, phase] = process.argv.slice(2);
 const babelLoader = require.resolve("babel-loader");
 const canaryVersion = require("@rspack-canary/core/package.json").version;
+const maxMemoryGenerations = Number(process.env.MAX_MEMORY_GENERATIONS ?? 10);
+
+if (!Number.isInteger(maxMemoryGenerations) || maxMemoryGenerations < 0) {
+  throw new Error("MAX_MEMORY_GENERATIONS must be a non-negative integer");
+}
 
 const newCacheOptions = {
   "legacy-cache": false,
@@ -38,7 +43,7 @@ const config = {
   entry: ["./src/vendor-entry.js", "./src/m0.js"],
   cache: {
     type: "persistent",
-    maxMemoryGenerations: 10,
+    maxMemoryGenerations,
     version: `pr-15380-${canaryVersion}`,
     buildDependencies: [],
     storage: {
@@ -125,6 +130,7 @@ compiler.run((error, stats) => {
       `${JSON.stringify({
         cacheKind,
         phase,
+        maxMemoryGenerations,
         elapsedMs,
         maxRssMiB: process.resourceUsage().maxRSS / 1024,
         compilationModuleCount: stats?.compilation.modules.size,

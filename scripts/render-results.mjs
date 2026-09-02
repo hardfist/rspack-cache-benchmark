@@ -73,6 +73,7 @@ export function renderResults(result) {
 
 - Canary: \`@rspack-canary/core@${result.canaryVersion}\`
 - PR commit: [\`${result.commit.slice(0, 8)}\`](https://github.com/web-infra-dev/rspack/commit/${result.commit})
+- Max memory generations: \`${result.maxMemoryGenerations}\`
 - Runner: ${result.runtime.runner}, \`${result.runtime.platform}-${result.runtime.arch}\`, Node ${result.runtime.node}, ${result.runtime.cpus} logical CPUs
 - Generated: ${result.generatedAt}
 - Aggregation: median of ${result.rounds} isolated seed/restore rounds; lower is better

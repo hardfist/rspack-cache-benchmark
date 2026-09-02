@@ -69,6 +69,7 @@ const result = {
   pullRequest: packageJson.benchmark.pullRequest,
   commit: packageJson.benchmark.commit,
   canaryVersion: require("@rspack-canary/core/package.json").version,
+  maxMemoryGenerations: rows[0]?.maxMemoryGenerations,
   runtime: {
     platform: process.platform,
     arch: process.arch,
@@ -91,4 +92,3 @@ const render = await import("./render-results.mjs");
 const summary = render.renderResults(result);
 fs.writeFileSync(path.join(root, "results", "summary.md"), `${summary}\n`);
 process.stdout.write(`\n${summary}\n`);
-
